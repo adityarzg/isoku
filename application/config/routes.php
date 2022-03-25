@@ -10,3 +10,5 @@ $route['homepage'] = 'Landing';
 $route['shop'] = 'Landing/shop';
 $route['about'] = 'Landing/about';
 $route['contact'] = 'Landing/contact';
+// $route['admin'] = 'Landing/forbidden';
+// $route['berkaryadenganhati'] = 'Admin';

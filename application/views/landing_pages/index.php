@@ -8,8 +8,8 @@
                         <div class="row justify-content-between align-items-center">
                             <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8">
                                 <div class="hero__caption">
-                                    <h1 data-animation="fadeInLeft" data-delay=".4s" data-duration="2000ms">LKP ISOKU</h1>
-                                    <p data-animation="fadeInLeft" data-delay=".7s" data-duration="2000ms">Lembaga Kursus dan Pelatihan yang berbasis di Medan, Sumatera Utara. Isoku tidak hanya sekedar sebagai lembaga kursus dan pelatihan, namun juga menerima pesanan tempahan baju wanita dan Pelatihan Ecoprint.</p>
+                                    <h1 data-animation="fadeInLeft" data-delay=".4s" data-duration="2000ms"><?= $heroSection['title'] ?></h1>
+                                    <p data-animation="fadeInLeft" data-delay=".7s" data-duration="2000ms"><?= $heroSection['content']; ?></p>
                                     <!-- Hero-btn -->
                                     <div class="hero__btn" data-animation="fadeInLeft" data-delay=".8s" data-duration="2000ms">
                                         <a href="<?= base_url('shop') ?>" class="btn hero-btn">Lihat Produk</a>
@@ -19,7 +19,7 @@
                             </div>
                             <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 d-none d-sm-block">
                                 <div class="hero__img" data-animation="bounceIn" data-delay=".4s">
-                                    <img src="assets/img/hero/dress.png" alt="" class=" heartbeat">
+                                    <img src="assets/img/hero/<?= $heroSection['image']; ?>" alt="" class=" heartbeat">
                                 </div>
                             </div>
                         </div>
@@ -40,39 +40,19 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-new-pro mb-30 text-center">
-                            <div class="product-img">
-                                <img src="assets/img/gallery/new_product1.jpg" alt="">
-                            </div>
-                            <div class="product-caption">
-                                <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                                <span>$ 45,743</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-new-pro mb-30 text-center">
-                            <div class="product-img">
-                                <img src="assets/img/gallery/new_product2.jpg" alt="">
-                            </div>
-                            <div class="product-caption">
-                                <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                                <span>$ 45,743</span>
+                    <?php foreach ($newArrival as $nw) : ?>
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                            <div class="single-new-pro mb-30 text-center">
+                                <div class="product-img">
+                                    <img src="assets/img/gallery/<?= $nw['image'] ?>" alt="">
+                                </div>
+                                <div class="product-caption">
+                                    <h3><a href=""><?= $nw['title'] ?></a></h3>
+                                    <span><?= $nw['price'] ?></span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-new-pro mb-30 text-center">
-                            <div class="product-img">
-                                <img src="assets/img/gallery/new_product3.jpg" alt="">
-                            </div>
-                            <div class="product-caption">
-                                <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                                <span>$ 45,743</span>
-                            </div>
-                        </div>
-                    </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </section>
@@ -92,24 +72,24 @@
                 <div class="row">
                     <div class="col-xl-6 col-lg-4 col-md-6 col-sm-6">
                         <div class="single-gallery mb-30">
-                            <div class="gallery-img big-img" style="background-image: url(assets/img/gallery/gallery1.png);"></div>
+                            <div class="gallery-img big-img" style="background-image: url(assets/img/gallery/<?= $gallerySection1['image']; ?>);"></div>
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
                         <div class="single-gallery mb-30">
-                            <div class="gallery-img big-img" style="background-image: url(assets/img/gallery/gallery2.png);"></div>
+                            <div class="gallery-img big-img" style="background-image: url(assets/img/gallery/<?= $gallerySection2['image']; ?>);"></div>
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-12">
                         <div class="row">
                             <div class="col-xl-12 col-lg-12 col-md-6 col-sm-6">
                                 <div class="single-gallery mb-30">
-                                    <div class="gallery-img small-img" style="background-image: url(assets/img/gallery/gallery3.png);"></div>
+                                    <div class="gallery-img small-img" style="background-image: url(assets/img/gallery/<?= $gallerySection3['image']; ?>);"></div>
                                 </div>
                             </div>
                             <div class="col-xl-12 col-lg-12  col-md-6 col-sm-6">
                                 <div class="single-gallery mb-30">
-                                    <div class="gallery-img small-img" style="background-image: url(assets/img/gallery/gallery4.png);"></div>
+                                    <div class="gallery-img small-img" style="background-image: url(assets/img/gallery/<?= $gallerySection4['image']; ?>);"></div>
                                 </div>
                             </div>
                         </div>

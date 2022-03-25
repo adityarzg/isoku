@@ -10,9 +10,16 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <script src="<?php echo base_url(); ?>assets_admin/modules/moment.min.js"></script>
 <script src="<?php echo base_url(); ?>assets_admin/js/stisla.js"></script>
 
+<!-- DataTables -->
+<script src="<?php echo base_url(); ?>assets_admin/modules/jquery-ui/jquery-ui.min.js"></script>
+<script src="<?php echo base_url(); ?>assets_admin/modules/datatables/datatables.min.js"></script>
+<script src="<?php echo base_url(); ?>assets_admin/modules/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js"></script>
+<script src="<?php echo base_url(); ?>assets_admin/modules/datatables/Select-1.2.4/js/dataTables.select.min.js"></script>
+<script src="<?php echo base_url(); ?>assets_admin/js/page/modules-datatables.js"></script>
+
 <!-- JS Libraies -->
 <?php
-if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
+if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "admin") { ?>
   <script src="<?php echo base_url(); ?>assets_admin/modules/jquery.sparkline.min.js"></script>
   <script src="<?php echo base_url(); ?>assets_admin/modules/chart.min.js"></script>
   <script src="<?php echo base_url(); ?>assets_admin/modules/owlcarousel2/dist/owl.carousel.min.js"></script>
@@ -53,7 +60,7 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
 } elseif ($this->uri->segment(2) == "components_table") { ?>
   <script src="<?php echo base_url(); ?>assets_admin/modules/jquery-ui/jquery-ui.min.js"></script>
 <?php
-} elseif ($this->uri->segment(2) == "components_user") { ?>
+} elseif ($this->uri->segment(2) == "admin") { ?>
   <script src="<?php echo base_url(); ?>assets_admin/modules/owlcarousel2/dist/owl.carousel.min.js"></script>
 <?php
 } elseif ($this->uri->segment(2) == "forms_advanced_form") { ?>
@@ -83,13 +90,7 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
 } elseif ($this->uri->segment(2) == "modules_chartjs") { ?>
   <script src="<?php echo base_url(); ?>assets_admin/modules/chart.min.js"></script>
 <?php
-} elseif ($this->uri->segment(2) == "modules_datatables") { ?>
-  <script src="<?php echo base_url(); ?>assets_admin/modules/datatables/datatables.min.js"></script>
-  <script src="<?php echo base_url(); ?>assets_admin/modules/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js"></script>
-  <script src="<?php echo base_url(); ?>assets_admin/modules/datatables/Select-1.2.4/js/dataTables.select.min.js"></script>
-  <script src="<?php echo base_url(); ?>assets_admin/modules/jquery-ui/jquery-ui.min.js"></script>
-<?php
-} elseif ($this->uri->segment(2) == "modules_owl_carousel") { ?>
+} elseif ($this->uri->segment(2) == "admin") { ?>
   <script src="<?php echo base_url(); ?>assets_admin/modules/owlcarousel2/dist/owl.carousel.min.js"></script>
 <?php
 } elseif ($this->uri->segment(2) == "modules_sparkline") { ?>
@@ -196,13 +197,10 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
 } elseif ($this->uri->segment(2) == "modules_chartjs") { ?>
   <script src="<?php echo base_url(); ?>assets_admin/js/page/modules-chartjs.js"></script>
 <?php
-} elseif ($this->uri->segment(2) == "modules_datatables") { ?>
-  <script src="<?php echo base_url(); ?>assets_admin/js/page/modules-datatables.js"></script>
-<?php
 } elseif ($this->uri->segment(2) == "modules_ion_icons") { ?>
   <script src="<?php echo base_url(); ?>assets_admin/js/page/modules-ion-icons.js"></script>
 <?php
-} elseif ($this->uri->segment(2) == "modules_owl_carousel") { ?>
+} elseif ($this->uri->segment(2) == "admin") { ?>
   <script src="<?php echo base_url(); ?>assets_admin/js/page/modules-slider.js"></script>
 <?php
 } elseif ($this->uri->segment(2) == "modules_sparkline") { ?>

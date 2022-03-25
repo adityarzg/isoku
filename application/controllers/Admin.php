@@ -7,11 +7,15 @@ class Admin extends CI_Controller
     {
         parent::__construct();
         is_logged_in();
+        $this->load->model('Admin_model', 'admin');
     }
 
     public function index()
     {
         $data['title'] = 'Dashboard';
+        $data['heroSection'] = $this->admin->getHeroSection();
+        $data['newArrival'] = $this->admin->getNewArrival();
+        $data['gallerySection'] = $this->admin->getGallerySection();
         $this->load->view('dist/index', $data);
     }
 

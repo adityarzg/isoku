@@ -19,7 +19,7 @@
         <div class="container">
             <div class="d-none d-sm-block mb-5 pb-4">
                 <div class="mapouter">
-                    <div class="gmap_canvas"><iframe width="1080" height="600" id="gmap_canvas" src="https://maps.google.com/maps?q=Jl.%20Dwikora,%20Harjosari%20II,%20Kec.%20Medan%20Amplas,%20Kota%20Medan,%20Sumatera%20Utara%2020148&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://123movies-to.org"></a><br>
+                    <div class="gmap_canvas"><iframe width="1080" height="600" id="gmap_canvas" src="https://maps.google.com/maps?q=3.535300936365959,%2098.69810026086677&t=&z=19&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://123movies-to.org"></a><br>
                         <style>
                             .mapouter {
                                 position: relative;

@@ -14,9 +14,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets_admin/modules/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets_admin/modules/fontawesome/css/all.min.css">
 
+  <!-- DataTables -->
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets_admin/modules/datatables/datatables.min.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets_admin/modules/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets_admin/modules/datatables/Select-1.2.4/css/select.bootstrap4.min.css">
+
   <!-- CSS Libraries -->
   <?php
-  if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
+  if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "admin") { ?>
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets_admin/modules/jqvmap/dist/jqvmap.min.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets_admin/modules/summernote/summernote-bs4.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets_admin/modules/owlcarousel2/dist/assets/owl.carousel.min.css">
@@ -44,7 +49,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets_admin/modules/jqvmap/dist/jqvmap.min.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets_admin/modules/flag-icon-css/css/flag-icon.min.css">
   <?php
-  } elseif ($this->uri->segment(2) == "components_user") { ?>
+  } elseif ($this->uri->segment(2) == "admin") { ?>
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets_admin/modules/bootstrap-social/bootstrap-social.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets_admin/modules/owlcarousel2/dist/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets_admin/modules/owlcarousel2/dist/assets/owl.theme.default.min.css">
@@ -66,15 +71,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
   } elseif ($this->uri->segment(2) == "modules_calendar") { ?>
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets_admin/modules/fullcalendar/fullcalendar.min.css">
   <?php
-  } elseif ($this->uri->segment(2) == "modules_datatables") { ?>
-    <link rel="stylesheet" href="<?php echo base_url(); ?>assets_admin/modules/datatables/datatables.min.css">
-    <link rel="stylesheet" href="<?php echo base_url(); ?>assets_admin/modules/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" href="<?php echo base_url(); ?>assets_admin/modules/_admindatatables/Select-1.2.4/css/select.bootstrap4.min.css">
-  <?php
   } elseif ($this->uri->segment(2) == "modules_ion_icons") { ?>
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets_admin/modules/ionicons/css/ionicons.min.css">
   <?php
-  } elseif ($this->uri->segment(2) == "modules_owl_carousel") { ?>
+  } elseif ($this->uri->segment(2) == "admin") { ?>
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets_admin/modules/owlcarousel2/dist/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets_admin/modules/owlcarousel2/dist/assets/owl.theme.default.min.css">
   <?php
@@ -143,7 +143,7 @@ if ($this->uri->segment(2) == "layout_transparent") {
 } elseif ($this->uri->segment(2) == "layout_top_navigation") {
   $this->load->view('dist/_partials/layout-3');
   $this->load->view('dist/_partials/navbar');
-} elseif ($this->uri->segment(1) != "auth" && $this->uri->segment(2) != "forgot" && $this->uri->segment(2) != "signup" && $this->uri->segment(2) != "auth_reset_password" && $this->uri->segment(2) != "errors_503" && $this->uri->segment(2) != "errors_403" && $this->uri->segment(2) != "errors_404" && $this->uri->segment(2) != "errors_500" && $this->uri->segment(2) != "utilities_contact" && $this->uri->segment(2) != "utilities_subscribe") {
+} elseif ($this->uri->segment(1) != "auth" && $this->uri->segment(2) != "forgot" && $this->uri->segment(2) != "signup" && $this->uri->segment(1) != "auth_reset_password" && $this->uri->segment(2) != "errors_503" && $this->uri->segment(2) != "errors_403" && $this->uri->segment(2) != "errors_404" && $this->uri->segment(2) != "errors_500" && $this->uri->segment(2) != "utilities_contact" && $this->uri->segment(2) != "utilities_subscribe") {
   $this->load->view('dist/_partials/layout');
   $this->load->view('dist/_partials/sidebar');
 }
