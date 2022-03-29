@@ -16,6 +16,7 @@ class Admin extends CI_Controller
         $data['heroSection'] = $this->admin->getHeroSection();
         $data['newArrival'] = $this->admin->getNewArrival();
         $data['gallerySection'] = $this->admin->getGallerySection();
+        $data['ecoprint'] = $this->admin->getEcoprint();
         $this->load->view('dist/index', $data);
     }
 

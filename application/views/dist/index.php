@@ -14,7 +14,7 @@ $this->load->view('dist/_partials/header');
                 <div class="col-12 col-md-12 col-lg-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4>Header Beranda</h4>
+                            <h4>Judul dan Konten Beranda</h4>
                         </div>
                         <div class="card-body p-0">
                             <div class="table-responsive">
@@ -115,6 +115,27 @@ $this->load->view('dist/_partials/header');
                                         <a href="<?= base_url('admin/editGallerySection/') . $g['id']; ?>" class="btn btn-primary mb-4 mt-4 mx-auto">Edit Galeri</a>
                                     </div>
                                     <div class="text-job text-muted">Judul : <?= $g['title']; ?></div>
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card card-success col-12">
+                    <div class="card-header">
+                        <h4>Produk Ecoprint</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <?php foreach ($ecoprint as $e) : ?>
+                                <div class="col-4 mb-4 mb-md-0">
+                                    <div class="row px-5">
+                                        <img alt="image" src="<?php echo base_url(); ?>assets/img/gallery/<?= $e['image'] ?>" class="img-fluid" data-toggle="tooltip" title="<?= $e['title'] ?>">
+                                        <a href="<?= base_url('admin/editNewArrivalSection/') . $e['id']; ?>" class="btn btn-primary mb-4 mt-4 mx-auto">Edit Produk</a>
+                                    </div>
+                                    <div class="text-job text-muted">Harga : <?= $e['price']; ?></div>
+                                    <div class="text-job text-muted mb-4">Link : <?= $e['link']; ?></div>
                                 </div>
                             <?php endforeach; ?>
                         </div>
