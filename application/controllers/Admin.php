@@ -14,9 +14,12 @@ class Admin extends CI_Controller
     {
         $data['title'] = 'Dashboard';
         $data['heroSection'] = $this->admin->getHeroSection();
-        $data['newArrival'] = $this->admin->getNewArrival();
-        $data['gallerySection'] = $this->admin->getGallerySection();
-        $data['ecoprint'] = $this->admin->getEcoprint();
+        $data['newArrival'] = $this->db->get_where('profil', array('pageSection' => 'section_newArrival'))->result_array();
+        $data['gallerySection'] = $this->db->get_where('profil', array('pageSection' => 'section_gallery'))->result_array();
+        $data['ecoprint'] = $this->db->get_where('profil', array('pageSection' => 'section_ecoprintProduct'))->result_array();
+        $data['video'] = $this->db->get_where('profil', array('pageSection' => 'section_video'))->result_array();
+        $data['pelatihan'] = $this->db->get_where('profil', array('pageSection' => 'section_pelatihan'))->result_array();
+        $data['kursus'] = $this->db->get_where('profil', array('pageSection' => 'section_kursus'))->result_array();
         $this->load->view('dist/index', $data);
     }
 

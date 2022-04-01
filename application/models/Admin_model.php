@@ -7,40 +7,7 @@ class Admin_model extends CI_Model
     {
         $q = "SELECT `profil`.* 
                 FROM `profil`
-                WHERE `profil`.`pageSection` = 'section_hero' OR `profil`.`pageSection` = 'section_ecoprint'
-                ";
-        return $this->db->query($q)->result_array();
-        // var_dump($query);
-        // exit;
-    }
-
-    public function getNewArrival()
-    {
-        $q = "SELECT `profil`.* 
-                FROM `profil`
-                WHERE`profil`.`pageSection` = 'section_newArrival'
-                ";
-        return $this->db->query($q)->result_array();
-        // var_dump($query);
-        // exit;
-    }
-
-    public function getGallerySection()
-    {
-        $q = "SELECT `profil`.* 
-                FROM `profil`
-                WHERE`profil`.`pageSection` = 'section_gallery'
-                ";
-        return $this->db->query($q)->result_array();
-        // var_dump($query);
-        // exit;
-    }
-
-    public function getEcoprint()
-    {
-        $q = "SELECT `profil`.* 
-                FROM `profil`
-                WHERE`profil`.`pageSection` = 'section_ecoprintProduct'
+                WHERE `profil`.`pageSection` = 'section_hero' OR `profil`.`pageSection` = 'section_ecoprint' OR `profil`.`pageSection` = 'section_tempahan'
                 ";
         return $this->db->query($q)->result_array();
         // var_dump($query);

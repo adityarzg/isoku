@@ -55,35 +55,4 @@
          </div>
      </div>
      <!-- Video Area End -->
-     <!--? Shop Method Start-->
-     <div class="shop-method-area">
-         <div class="container">
-             <div class="method-wrapper">
-                 <div class="row d-flex justify-content-between">
-                     <div class="col-xl-4 col-lg-4 col-md-6">
-                         <div class="single-method mb-40">
-                             <i class="ti-ruler-alt"></i>
-                             <h6>Kursus Menjahit</h6>
-                             <p>aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd.</p>
-                         </div>
-                     </div>
-                     <div class="col-xl-4 col-lg-4 col-md-6">
-                         <div class="single-method mb-40">
-                             <i class="ti-shine"></i>
-                             <h6>Pelatihan Ecoprint</h6>
-                             <p>aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd.</p>
-                         </div>
-                     </div>
-                     <div class="col-xl-4 col-lg-4 col-md-6">
-                         <div class="single-method mb-40">
-                             <i class="ti-cut"></i>
-                             <h6>Tempahan Baju</h6>
-                             <p>aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd.</p>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-         </div>
-     </div>
-     <!-- Shop Method End-->
  </main>

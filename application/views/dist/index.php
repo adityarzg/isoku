@@ -142,6 +142,62 @@ $this->load->view('dist/_partials/header');
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="card card-danger col-4">
+                    <div class="card-header">
+                        <h4>Video Isoku</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <?php foreach ($video as $v) : ?>
+                                <div class="col-12 mb-12 mb-md-0">
+                                    <div class="row px-5">
+                                        <img alt="image" src="<?php echo base_url(); ?>assets/img/gallery/<?= $v['image'] ?>" class="img-fluid" data-toggle="tooltip" title="<?= $v['title'] ?>">
+                                        <a href="<?= base_url('admin/editNewArrivalSection/') . $v['id']; ?>" class="btn btn-primary mb-4 mt-4 mx-auto">Edit Video</a>
+                                    </div>
+                                    <div class="text-job text-muted">Link : <a target="_blank" href="<?= $v['link']; ?>">Liat Video</a></div>
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card-warning col-4">
+                    <div class="card-header">
+                        <h4>Pelatihan Ecoprint</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <?php foreach ($pelatihan as $p) : ?>
+                                <div class="col-12 mb-12 mb-md-0">
+                                    <div class="row px-5">
+                                        <img alt="image" src="<?php echo base_url(); ?>assets/img/gallery/<?= $p['image'] ?>" class="img-fluid" data-toggle="tooltip" title="<?= $p['title'] ?>">
+                                        <a href="<?= base_url('admin/editNewArrivalSection/') . $p['id']; ?>" class="btn btn-primary mb-4 mt-4 mx-auto">Edit</a>
+                                    </div>
+                                    <div class="text-job text-dark"><?= $p['content']; ?></div>
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card-warning col-4">
+                    <div class="card-header">
+                        <h4>Kursus Menjahit</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <?php foreach ($kursus as $k) : ?>
+                                <div class="col-12 mb-12 mb-md-0">
+                                    <div class="row px-5">
+                                        <img alt="image" src="<?php echo base_url(); ?>assets/img/gallery/<?= $k['image'] ?>" class="img-fluid" data-toggle="tooltip" title="<?= $k['title'] ?>">
+                                        <a href="<?= base_url('admin/editNewArrivalSection/') . $k['id']; ?>" class="btn btn-primary mb-4 mt-4 mx-auto">Edit</a>
+                                    </div>
+                                    <div class="text-job text-dark"><?= $k['content']; ?></div>
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 </div>

@@ -1,3 +1,34 @@
+<!--? Shop Method Start-->
+<div class="shop-method-area">
+    <div class="container">
+        <div class="method-wrapper">
+            <div class="row d-flex justify-content-between">
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="single-method mb-40">
+                        <i class="ti-ruler-alt"></i>
+                        <h6><?= $kursusIsoku['title']; ?></h6>
+                        <p><?= $kursusIsoku['content']; ?></p>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="single-method mb-40">
+                        <i class="ti-shine"></i>
+                        <h6><?= $pelatihanIsoku['title']; ?></h6>
+                        <p><?= $pelatihanIsoku['content']; ?></p>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="single-method mb-40">
+                        <i class="ti-cut"></i>
+                        <h6><?= $tempahanIsoku['title']; ?></h6>
+                        <p><?= $tempahanIsoku['content']; ?></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Shop Method End-->
 <footer>
     <!-- Footer Start-->
     <div class="footer-area footer-padding">
