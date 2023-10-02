@@ -123,8 +123,8 @@ class Auth extends CI_Controller
 		$config  = [
 			'protocol'  => 'smtp',
 			'smtp_host' => 'ssl://smtp.googlemail.com',
-			'smtp_user' => 'isoku.app@gmail.com',
-			'smtp_pass' => 'isokushop',
+			'smtp_user' => 'isokudeveloper@gmail.com',
+			'smtp_pass' => 'jduc hxtu xbcx muyn',
 			'smtp_port' => '465',
 			'mailtype' => 'html',
 			'charset'  => 'utf-8',
@@ -133,8 +133,9 @@ class Auth extends CI_Controller
 
 		$this->load->library('email', $config);
 		$this->email->initialize($config);
-		$this->email->from('isoku.app@gmail.com', 'Isoku Developer');
+		$this->email->from('isokudeveloper@gmail.com', 'Isoku Developer');
 		$this->email->to($this->input->post('email'));
+
 		if ($type == 'verify') {
 			$this->email->subject('Verifikasi Pendaftaran Akun');
 			$this->email->message(
@@ -143,10 +144,11 @@ class Auth extends CI_Controller
 			);
 		} elseif ($type == 'forgot') {
 			$this->email->subject('Atur Ulang Kata Sandi');
-			$this->email->message(
+			$x = $this->email->message(
 				'Klik link untuk mengatur ulang kata sandi anda : 
             <a href="' . base_url() . 'auth/resetPassword?email=' . $this->input->post('email') . '&token=' . urlencode($token) . '"> Link </a>'
 			);
+
 		}
 
 		if ($this->email->send()) {
@@ -253,7 +255,7 @@ class Auth extends CI_Controller
 		$this->form_validation->set_rules('repeatnew_password', 'Repeat Password', 'required|trim|min_length[6]|matches[new_password]');
 		if ($this->form_validation->run() == false) {
 			$data['title'] = 'Ubah Kata Sandi';
-			$this->load->view('auth/reset_password');
+			$this->load->view('auth/reset_password', $data);
 		} else {
 			$password = password_hash($this->input->post('new_password'), PASSWORD_DEFAULT);
 			$email = $this->session->userdata('reset_email');

@@ -12,3 +12,7 @@ $route['about'] = 'Landing/about';
 $route['contact'] = 'Landing/contact';
 // $route['admin'] = 'Landing/forbidden';
 // $route['berkaryadenganhati'] = 'Admin';
+
+//Route untuk  add / edit Landing Page
+$route['edit/(:any)/(:any)'] = 'Admin/form/$1/$2';
+$route['processTitle'] = 'Admin/processTitle';

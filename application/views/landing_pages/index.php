@@ -65,7 +65,7 @@
                     <div class="col-xl-7 col-lg-8 col-md-10">
                         <div class="section-tittle mb-70 text-center">
                             <h2>Galeri ISOKU</h2>
-                            <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
+                            <p>ISOKU menawarkan pilihan yang luar biasa dalam fashion, dari koleksi eksklusif hingga produk yang dirancang khusus untuk Anda.</p>
                         </div>
                     </div>
                 </div>

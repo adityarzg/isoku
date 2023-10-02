@@ -13,6 +13,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
       <li class="<?php echo $this->uri->segment(2) == '' || $this->uri->segment(2) == 'index' || $this->uri->segment(2) == 'index_0' ? 'active' : ''; ?>">
         <a href="<?= base_url('admin/index') ?>" class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
       </li>
+      <li class="<?php echo $this->uri->segment(2) == 'landing' ? 'active' : ''; ?>">
+        <a href="<?= base_url('admin/landing') ?>" class="nav-link"><i class="fas fa-rocket"></i><span>Landing Page</span></a>
+      </li>
       <li class="<?php echo $this->uri->segment(2) == 'produk' ? 'active' : ''; ?>">
         <a href="<?= base_url('admin/produk') ?>" class="nav-link"><i class="fas fa-tshirt"></i><span>Produk</span></a>
       </li>
@@ -26,7 +29,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
     <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
       <a href="<?= base_url('landing'); ?>" class="btn btn-primary btn-lg btn-block btn-icon-split">
-        <i class="fas fa-rocket"></i> Landing Page
+        <i class="fas fa-rocket"></i>Launch Landing Page
       </a>
     </div>
   </aside>
