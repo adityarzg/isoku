@@ -77,7 +77,7 @@ $this->load->view('dist/_partials/header');
                                 <div class="col-3 mb-4 mb-md-0">
                                     <div class="row px-5">
                                         <img alt="image" src="<?php echo base_url(); ?>assets/img/gallery/<?= $g['image'] ?>" class="img-fluid" data-toggle="tooltip" title="<?= $g['title'] ?>">
-                                        <a href="<?= base_url('admin/editGallerySection/') . $g['id']; ?>" class="btn btn-primary mb-4 mt-4 mx-auto">Edit Galeri</a>
+                                        <a href="<?= base_url('edit/galeri/') . urlencode($this->secure->encrypt_url($g['id'])); ?>" class="btn btn-primary mb-4 mt-4 mx-auto">Edit Galeri</a>
                                     </div>
                                     <div class="text-job text-muted">Judul : <?= $g['title']; ?></div>
                                 </div>
@@ -136,7 +136,7 @@ $this->load->view('dist/_partials/header');
                                 <div class="col-12 mb-12 mb-md-0">
                                     <div class="row px-5">
                                         <img alt="image" src="<?php echo base_url(); ?>assets/img/gallery/<?= $p['image'] ?>" class="img-fluid" data-toggle="tooltip" title="<?= $p['title'] ?>">
-                                        <a href="<?= base_url('admin/editNewArrivalSection/') . $p['id']; ?>" class="btn btn-primary mb-4 mt-4 mx-auto">Edit</a>
+                                        <a href="<?= base_url('edit/pelatihan/') . urlencode($this->secure->encrypt_url($p['id'])); ?>" class="btn btn-primary mb-4 mt-4 mx-auto">Edit</a>
                                     </div>
                                     <div class="text-job text-dark"><?= $p['content']; ?></div>
                                 </div>

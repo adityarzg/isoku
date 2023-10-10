@@ -16,3 +16,11 @@ $route['contact'] = 'Landing/contact';
 //Route untuk  add / edit Landing Page
 $route['edit/(:any)/(:any)'] = 'Admin/form/$1/$2';
 $route['processTitle'] = 'Admin/processTitle';
+
+//Route untuk  add / edit Galeri Isoku
+$route['edit/(:any)/(:any)'] = 'Admin/form/$1/$2';
+$route['processGaleri'] = 'Admin/processGaleri';
+
+//Route untuk  add / edit Pelatihan Ecoprint
+$route['edit/(:any)/(:any)'] = 'Admin/form/$1/$2';
+$route['processPelatihan'] = 'Admin/processPelatihan';

@@ -25,7 +25,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 */
 // $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http';
 // $url = $protocol . '://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['SCRIPT_NAME']) . '/';
-$config['base_url'] = 'http://localhost:81/isoku/';
+$config['base_url'] = 'http://localhost/isoku/';
 
 /*
 |--------------------------------------------------------------------------
