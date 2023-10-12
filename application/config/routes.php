@@ -13,14 +13,19 @@ $route['contact'] = 'Landing/contact';
 // $route['admin'] = 'Landing/forbidden';
 // $route['berkaryadenganhati'] = 'Admin';
 
-//Route untuk  add / edit Landing Page
 $route['edit/(:any)/(:any)'] = 'Admin/form/$1/$2';
+
+//Route untuk  add / edit Landing Page
 $route['processTitle'] = 'Admin/processTitle';
 
 //Route untuk  add / edit Galeri Isoku
-$route['edit/(:any)/(:any)'] = 'Admin/form/$1/$2';
 $route['processGaleri'] = 'Admin/processGaleri';
 
 //Route untuk  add / edit Pelatihan Ecoprint
-$route['edit/(:any)/(:any)'] = 'Admin/form/$1/$2';
 $route['processPelatihan'] = 'Admin/processPelatihan';
+
+//Route untuk  add / edit Kursus Menjahit
+$route['processKursus'] = 'Admin/processKursus';
+
+//Route untuk  add / edit Url Video
+$route['processUrlVideo'] = 'Admin/processUrlVideo';

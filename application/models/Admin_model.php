@@ -19,25 +19,7 @@ class Admin_model extends CI_Model
         $this->db->update('profil', $data);
     }
 
-    public function getDataTitle($id)
-    {
-        // Query untuk mengambil data berdasarkan ID dari tabel
-        $q = $this->db->get_where('profil', array('id' => $id));
-
-        // Mengembalikan hasil query dalam bentuk objek atau array
-        return $q->result_array(); //untuk mengembalikan sebagai array
-    }
-
-    public function getDataGaleri($id)
-    {
-        // Query untuk mengambil data berdasarkan ID dari tabel
-        $q = $this->db->get_where('profil', array('id' => $id));
-
-        // Mengembalikan hasil query dalam bentuk objek atau array
-        return $q->result_array(); //untuk mengembalikan sebagai array
-    }
-
-    public function getDataPelatihan($id)
+    public function getDataProfil($id)
     {
         // Query untuk mengambil data berdasarkan ID dari tabel
         $q = $this->db->get_where('profil', array('id' => $id));
